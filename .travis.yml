@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: j9ImEfSdXbATScDRdU0/OU8u9PcRpQbX64/ythbvHW1cBb3AEmS+t8TwTR3zmDHNUOTBcdI7qByRfF06v1efcpKYt1HxLdiRdagNVw45/93eoSrZ4bvNWx5FKpMeS7iAF8WGBuZOe7G2M1FKzHWd0OHCuCb0ViEvh9MGcjCxNt8ILyqmbNTb3tasv6Y2zjc/3Quw0AsUuoQbxQl42lW2cDO7u2DmpFsiK9XUjo9vZ+erWbiimSZCwexl9eeZZysouT0ECMLYRkOirAaF/MdybLTCQFcd4LXvJP/F5M1bcoLeHZeH/fXhmPn+k3G6RMCLp1GIWNbLPxNqMvyIZUzHgmTh9Cp/UE9FkrilEWpzuJTKeuoi8kqZtGYCWclcqBVEzOGKwvOHlM8jGXM1Y/Jm0JA0CIiCkE46UHd3uEsdM6E490FlDu7H9BfW+vLZcLLqO2ZPyBKVTm6kDyhZsbgc12d/5Dd0sR9g6lHWPqCwmctvwl1rTuup2MnFn++WFMG/vAOeh63zYicW71TplTe6cCVIslYyS9i+2Nirk/WpHLKhTq7OFhUpEUcvqdAHD6Wvv0HE/Q2CVfcAlkKrRJUJDVLarQu0L1zG5xs3s9yf+HE/2fTCwvexLkK+iPw0RSJdfxq+UuQNXjHCrw5gqVLz55OGH7n4KyhyQAnvb6PpEBs=
+  app: aqueous-crag-96353
+  on:
+    repo: reinhal/Blog_Posts_Challenge
