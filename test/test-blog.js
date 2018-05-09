@@ -45,29 +45,29 @@ describe('BlogPosts', function() {
 		});
 	});
 
-//	it('shoule update posts on PUT', function() {
-//		const updatePost = {
-//			title: 'Spicy Jalapeno',
-//			content: 'Filet mignon biltong andouille pork chop pig t-bone, labore salami non esse. Ex fugiat nisi brisket, ball tip adipisicing esse rump dolor ea enim hamburger aute salami. Officia lorem doner rump ut drumstick exercitation do pancetta kevin enim. Brisket buffalo qui et.',
-//			author: 'Aute Laboris',
-//			publishDate: "May, 7, 2018"
-//		};
-//
-//		return chai.request(app)
-//			.get('/blog-posts')
-//			.then(function(res) {
-//				updatePost.id = res.body[0].id;
-//				return chai.request(app)
-//				.put(`/blog-posts/${updatePost.id}`)
-//				.send(updatePost);
-//			})
-//			.then(function(res) {
-//				expect(res).to.have.status(200);
-//        		expect(res).to.be.json;
-//        		expect(res.body).to.be.a('object');
-//        		expect(res.body).to.deep.equal(updatePost);
-//			});
-//	});
+	it('should update posts on PUT', function() {
+		const updateData = {
+			title: 'Spicy Jalapeno',
+			content: 'Filet mignon biltong andouille pork chop pig t-bone, labore salami non esse. Ex fugiat nisi brisket, ball tip adipisicing esse rump dolor ea enim hamburger aute salami. Officia lorem doner rump ut drumstick exercitation do pancetta kevin enim. Brisket buffalo qui et.',
+			author: 'Aute Laboris',
+			publishDate: "May, 7, 2018"
+		};
+
+		return chai.request(app)
+			.get('/blog-posts')
+			.then(function(res) {
+				updateData.id = res.body[0].id;
+				return chai.request(app)
+				.put(`/blog-posts/${updateData.id}`)
+				.send(updateData);
+			})
+			.then(function(res) {
+				expect(res).to.have.status(200);
+        		expect(res).to.be.json;
+        		expect(res.body).to.be.a('object');
+        		expect(res.body).to.deep.equal(updateData);
+			});
+	});
 
 	it('should delete posts on DELETE', function() {
 		return chai.request(app)
