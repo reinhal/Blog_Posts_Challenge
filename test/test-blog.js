@@ -60,8 +60,8 @@ describe('BlogPosts', function() {
 				.then(function(res) {
 					expect(res).to.have.status(204);
 				});
-		  });
-	  });
+		});
+	});
 
 	it('should delete posts on DELETE', function() {
 		return chai.request(app)
@@ -75,43 +75,3 @@ describe('BlogPosts', function() {
 		});
 	});
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
