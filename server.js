@@ -107,7 +107,7 @@ app.put('/blog-posts/:id', jsonParser, (req, res) => {
     return res.status(400).send(message);
   }
   console.log(`Updating blog post \`${req.params.id}\``);
-  BlogPost.update({
+  BlogPosts.update({
     id: req.params.id,
     title: req.body.title,
     content: req.body.content,
